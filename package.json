@@ -1,0 +1,27 @@
+{
+  "name": "gluon",
+  "version": "0.0.0",
+  "description": "An experimental \"Build as a Service\" package.",
+  "keywords": [
+    "build",
+    "compile",
+    "make",
+    "service"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "repository": "https://github.com/thomasjo/gluon",
+  "dependencies": {
+  },
+  "engines": {
+    "atom": ">=0.190.0 <2.0.0"
+  },
+  "providedServices": {
+    "build": {
+      "description": "...",
+      "versions": {
+        "0.1.0": "provideBuildService"
+      }
+    }
+  }
+}
