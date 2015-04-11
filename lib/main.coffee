@@ -1,9 +1,13 @@
 module.exports =
   activate: ->
-    return
+    @commands = atom.commands.add 'atom-workspace',
+      'gluon:build': =>
+        fn() if fn = @builders[Object.keys(@builders)?[0]]
 
-  # deactivate: ->
+  deactivate: ->
+    @commands.dispose()
 
   provideBuildService: ->
-    register: (name, details) ->
-      console.log(name)
+    register: (name, details) =>
+      @builders ?= {}
+      @builders[name] = details
