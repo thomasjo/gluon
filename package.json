@@ -21,11 +21,10 @@
   "engines": {
     "atom": ">=0.190.0 <2.0.0"
   },
-  "providedServices": {
+  "consumedServices": {
     "build": {
-      "description": "...",
       "versions": {
-        "0.1.0": "provideBuildService"
+        "^0.1.0": "registerBuilder"
       }
     }
   }
